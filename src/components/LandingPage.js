@@ -1,8 +1,8 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Activity, Map, ShoppingBag } from 'lucide-react';
 import React from 'react';
-import { Navigation, Map, ShoppingBag, Activity } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './LandingPage.css'; // For any additional custom styles
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function LandingPage() {
