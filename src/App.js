@@ -6,10 +6,10 @@ import './App.css';
 import LandingPage from './components/LandingPage';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('/');
+  const [activeTab, setActiveTab] = useState('/home');
 
   // Paths where the navbar should be hidden
-  const hiddenNavbarPaths = ['/onboarding', '/videoPlayer', '/seller', '/product', '/landingPage', '/login', '/register' ];
+  const hiddenNavbarPaths = ['/onboarding', '/videoPlayer', '/seller', '/product', '/', '/login', '/register' ];
 
   // Layout component to handle routes and navbar
   function Layout() {
@@ -27,18 +27,18 @@ function App() {
       <>
         {/* Main Routes for Pages */}
         <Routes>
-          <Route path='/landingPage' element={<LandingPage/>} />
+          <Route path='/' element={<LandingPage/>} />
         </Routes>
 
         {/* Mobile Navbar at the bottom */}
         {!shouldHideNavbar && (
           <nav className="mobile-navbar">
             <NavLink
-              to="/"
-              className={`nav-item ${activeTab === '/' ? 'active' : ''}`}
+              to="/home"
+              className={`nav-item ${activeTab === '/home' ? 'active' : ''}`}
             >
               <FontAwesomeIcon icon={faHome} />
-              {activeTab === '/' && <span>Home</span>}
+              {activeTab === '/home' && <span>Home</span>}
             </NavLink>
             <NavLink
               to="/map"
